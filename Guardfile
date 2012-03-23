@@ -9,3 +9,9 @@ end
 guard 'rake', :task => 'copy_assets' do
   watch(%r{^public/assets/application-.+$})
 end
+
+guard 'jasmine-headless-webkit' do
+  watch(%r{^spec/(.+)_spec\.(js\.coffee|js|coffee)})  { |m| newest_js_file("spec/#{m[1]}_spec.#{m[2]}") }
+  watch(%r{^lib/(.+)\.(js\.coffee|js)|coffee})        { |m| newest_js_file("spec/lib/#{m[1]}_spec.#{m[2]}") }
+  watch(%r{spec/spec_helper\.(js\.coffee|js|coffee)}) { "spec" }
+end
