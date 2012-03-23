@@ -26,4 +26,8 @@ Guard will watch the app folder and compile javascripts, coffeescripts, SASS and
 Put your application images, javascripts and stylesheets into app/images, app/javascripts and app/stylesheets.
 
 Put your vendor images, javascripts and stylesheets into vendor/images, vendor/javascripts and vendor/stylesheets.
-    
+
+## Configuration
+
+Edit config/assets.yml for additional files to asset pipeline.
+

@@ -1,0 +1,6 @@
+assets_paths:
+  - "app/stylesheets"
+  - "app/javascripts"
+  - "app/images"
+  - "vendor/stylesheets"
+  - "vendor/javascripts"
