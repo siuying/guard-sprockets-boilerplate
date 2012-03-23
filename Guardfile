@@ -15,12 +15,16 @@ guard 'sprockets2',
   :precompile => [/\w+\.(?!js|css|scss|coffee).+/, /application.(css|js)$/ ],
   :digest => false,
   :gz => false do
+    
+  watch(%r{^app/coffeescripts/.*\.coffee$})
   watch(%r{^app/(images|javascripts|stylesheets)/.+$})
   watch("config/assets.yml")
 end
 
 guard 'jasmine-headless-webkit' do
-  watch(%r{^spec/(.+)_spec\.(js\.coffee|js|coffee)})  { |m| newest_js_file("spec/#{m[1]}_spec.#{m[2]}") }
-  watch(%r{^lib/(.+)\.(js\.coffee|js)|coffee})        { |m| newest_js_file("spec/lib/#{m[1]}_spec.#{m[2]}") }
-  watch(%r{spec/spec_helper\.(js\.coffee|js|coffee)}) { "spec" }
+  watch(%r{^app/javascripts/compiled/(.*)\.js$}) { |m| "spec/compiled/#{m[1]}_spec.js" }
+  watch(%r{^app/javascripts/(.*)\.js$}) { |m| "spec/#{m[1]}_spec.js" }
+
+  watch(%r{^spec/javascripts/(.+)(_?[sS]pec)\.js})  { |m| "spec/javascripts/#{m[1]}#{m[2]}.js" }
+  watch(%r{^spec/javascripts/compiled/(.+)(_?[sS]pec)\.js})  { |m| "spec/javascripts/compiled/#{m[1]}#{m[2]}.js" }
 end
