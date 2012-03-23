@@ -11,6 +11,7 @@ gem 'sprockets'
 gem 'jasmine-headless-webkit', :git => 'git://github.com/johnbintz/jasmine-headless-webkit.git', :branch => 'master'
 
 gem 'guard-rake'
+gem 'guard-coffeescript'
 gem 'guard-sprockets2'
 gem 'guard-jasmine-headless-webkit'
 

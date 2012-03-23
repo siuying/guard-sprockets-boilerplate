@@ -27,6 +27,9 @@ GEM
     guard (1.0.1)
       ffi (>= 0.5.0)
       thor (~> 0.14.6)
+    guard-coffeescript (0.5.6)
+      coffee-script (>= 2.2.0)
+      guard (>= 0.8.3)
     guard-jasmine-headless-webkit (0.3.2)
       guard (>= 0.4.0)
       jasmine-headless-webkit (>= 0.7.0)
@@ -83,6 +86,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-script
+  guard-coffeescript
   guard-jasmine-headless-webkit
   guard-rake
   guard-sprockets2
