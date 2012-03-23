@@ -2,11 +2,20 @@
 
 A web project boilerplate use guard and sprockets to watch and compile your static assets 
 
-## Usage
+## What it does
+
+- Compile assets (stylesheets (css/scss), javascripts(js/coffee) and images) into /public/assets
+- Run jasmine using headless webkit
+
+## Installation
 
 Before using the boilderplate, install the dependencies:
 
     bundle install
+    
+You will also need to install [jasmine-headless-webkit](http://johnbintz.github.com/jasmine-headless-webkit/) and its dependencies first.
+
+## Usage
     
 Start development by running the gaurd command:
     
